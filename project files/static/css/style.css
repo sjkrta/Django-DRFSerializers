@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+  }
+  a {
+    text-decoration: none;
+  }
+  h1,
+  h2 {
+    letter-spacing: 0.2em;
+  }
+  .margin {
+    margin: 1em;
+  }
+  .padding {
+    padding: 1em;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-self: stretch;
+  }
+
+  .card {
+    border: 1px solid #bfbfbf;
+    box-shadow: 5px 5px 2px #aaaaaa;
+    margin: 1em;
+  }
+  .card-header {
+    background-color: rgb(243, 243, 243);
+  }
+  .card ul {
+    list-style-type: none;
+  }
+  .card div {
+    padding: 1em;
+  }
+  @media screen and (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .add-student {
+    display: grid;
+    grid-auto-flow: row;
+    background-color: rgb(243, 243, 243);
+  }
+  .button{
+      border:1px solid black;
+      padding:0.2em;
+      margin-right: 0.2em;
+  }
+  .button:hover{
+      background-color:black;
+      color:white;
+  }
+  /* imports */
+
+
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover{
+  color: blue;
+  font-weight: bold;
+}
+.burger-menu {
+  cursor: pointer;
+}
+.burger-menu div {
+  background-color: black;
+  height: 0.1em;
+  border-radius: 10%;
+  margin: 0.3em;
+  width: 1.1em;
+}
+/* from here the navbar section starts  */
+nav {
+  display: grid;
+  font-size: 2em;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  padding: 0.5em;
+  border-bottom: 1px solid rgb(233, 233, 233);
+}
+.brand{
+  letter-spacing: 0.15em;
+}
+.burger-menu {
+  display: none;
+}
+.nav-links a{
+  margin-left: 0.5em;
+}
+@media screen and (max-width: 768px) {
+  /* show nav in horizontal form */
+  nav {
+    grid-auto-flow: row;
+  }
+
+  /* hide nav-links items except the first one at width 768 */
+  .nav-links a {
+    display: none;
+    margin-top: 1em;
+  }
+  /* but keep burger menu unchanged at all times */
+  .burger-menu {
+    position: absolute;
+    right: 0.3em;
+    top: 0.4em;
+  }
+  /* display burger menu and nav-links 'a' as block item */
+  .burger-menu,
+  .nav.responsive .nav-links a {
+    display: block;
+  }
+}
+/* admin section below navbar */
+.admin-profile {
+  display: grid;
+  justify-items: center;
+  margin: 1em;
+}
+.admin-profile img {
+  height: 15em;
+  border-radius: 50%;
+}
+.admin-profile .name {
+  font-size: 2.5em;
+  padding: 0.5em;
+  font-weight: bold;
+}
+.admin-profile p {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* social icons */
+
+.social-icons {
+  display: grid;
+  justify-content: center;
+  grid-auto-flow: column;
+}
+.social-icons a i {
+  font-size: 3em;
+  padding: 0.2em;
+  margin: 0 0.3em;
+  color: #000;
+}
+.social-icons a i:hover {
+  color: blue;
+}
+
+/* arrow down */
+
+.arrow-down {
+  align-self: end;
+  margin-top: 2em;
+}
+.arrow-down img {
+  animation-name: arrow-down;
+  height: 7em;
+  left: 50%;
+  position: relative;
+  margin: auto;
+  transform: translate(-50%);
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+@keyframes arrow-down {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: 2em;
+  }
+  50% {
+    top: 0;
+  }
+  100% {
+    top: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .admin-profile img{
+    height: 10em;
+  }
+  .admin-profile p{
+    font-size: 1.5em;
+    text-align: center;
+  }
+}
+
+/* footer */
+footer{
+  border-top: 1px solid rgb(233, 233, 233);
+  height: 7em;
+
+}
+.copyright{
+  text-align: center;
+}

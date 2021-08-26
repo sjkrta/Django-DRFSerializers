@@ -1,0 +1,19 @@
+{% load static %}
+<h2 class="margin">Projects:</h2>
+<div class="grid">
+  {% block content %} {% for event in student_lists %}
+  <div class="card">
+    <div class="card-header">
+    </div>
+    <div class="card-items">
+      <ul>
+        <li><b>Name: </b>{{event.name}}</li>
+        <li><b>Sex: </b>{{event.sex}}</li>
+        <li><b>Email: </b>{{event.email}}</li>
+        <li><b>Address: </b>{{event.address}}</li>
+        <li><b>Date-Time: </b>{{event.date}}</li>
+      </ul>
+    </div>
+  </div>
+  {% endfor %} {% endblock content %}
+</div>
